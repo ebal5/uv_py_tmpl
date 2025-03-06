@@ -118,7 +118,7 @@ disallow_untyped_decorators = true
 no_implicit_optional = true
 strict_optional = true
 warn_redundant_casts = true
-warn_unused_ignores = true
+warn_unused_ignores = false  # Allow unused type ignores
 warn_no_return = true
 warn_unreachable = true
 

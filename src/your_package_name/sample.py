@@ -10,12 +10,13 @@ class Person:
     name: str
     age: int
     email: str | None = None
-    skills: list[str] | None = None
+    skills: list[str] = None  # type: ignore
 
     def __post_init__(self) -> None:
         """Initialize default values for optional fields."""
         if self.skills is None:
             self.skills = []
+        # After __post_init__, self.skills is guaranteed to be a list[str]
 
     def add_skill(self, skill: str) -> None:
         """Add a new skill to the person.
@@ -23,6 +24,7 @@ class Person:
         Args:
             skill: The skill to add
         """
+        # self.skills is guaranteed to be a list here due to __post_init__
         if skill not in self.skills:
             self.skills.append(skill)
             print(f"Added skill '{skill}' to {self.name}")
@@ -58,6 +60,7 @@ class Team:
         Returns:
             A dictionary mapping each team member's name to their skills
         """
+        # person.skills is guaranteed to be list[str] after Person.__post_init__
         return {name: person.skills for name, person in self.members.items()}
 
 

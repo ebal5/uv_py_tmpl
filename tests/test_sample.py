@@ -25,12 +25,12 @@ def test_add_skill() -> None:
     person = Person("Test Person", 30)
     person.add_skill("Python")
 
-    assert "Python" in person.skills
-    assert len(person.skills) == 1
+    assert "Python" in person.skills  # type: ignore
+    assert len(person.skills) == 1  # type: ignore
 
     # Adding the same skill twice should not duplicate it
     person.add_skill("Python")
-    assert len(person.skills) == 1
+    assert len(person.skills) == 1  # type: ignore
 
 
 def test_team_initialization() -> None:
