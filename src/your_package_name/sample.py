@@ -10,7 +10,7 @@ class Person:
     name: str
     age: int
     email: str | None = None
-    skills: list[str] = None
+    skills: list[str] = None  # type: ignore
 
     def __post_init__(self) -> None:
         """Initialize default values for optional fields."""

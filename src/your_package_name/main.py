@@ -1,8 +1,12 @@
 """Main module for your package."""
 
 
-def main() -> None:
-    """Run the main function."""
+def main() -> str:
+    """Run the main function.
+    
+    Returns:
+        A greeting message
+    """
     return "Hello, world!"
 
 
