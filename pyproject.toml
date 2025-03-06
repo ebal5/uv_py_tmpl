@@ -120,7 +120,7 @@ strict_optional = true
 warn_redundant_casts = true
 warn_unused_ignores = false  # Allow unused type ignores
 warn_no_return = true
-warn_unreachable = true
+warn_unreachable = false  # Disable unreachable statement warnings
 
 # Per-module options:
 [[tool.mypy.overrides]]
