@@ -78,22 +78,6 @@ ignore = ["T201"]  # Ignore print statements warnings
 fixable = ["ALL"]
 unfixable = []
 
-# Exclude some directories from linting
-exclude = [
-    ".git",
-    ".mypy_cache",
-    ".ruff_cache",
-    ".venv",
-    "__pypackages__",
-    "_build",
-    "build",
-    "dist",
-    "venv",
-]
-
-# Assume Python 3.10
-target-version = "py310"
-
 # Sort imports
 [tool.ruff.lint.isort]
 known-first-party = ["your_package_name"]
