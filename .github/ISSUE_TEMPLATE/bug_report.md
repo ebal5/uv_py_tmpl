@@ -1,30 +1,30 @@
 ---
-name: Bug report
-about: Create a report to help us improve
-title: '[BUG] '
+name: バグ報告
+about: 改善のためのバグ報告を作成する
+title: '[バグ] '
 labels: bug
 assignees: ''
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+**バグの説明**
+バグの内容を明確かつ簡潔に説明してください。
 
-**To Reproduce**
-Steps to reproduce the behavior:
+**再現手順**
+動作を再現するための手順:
 1. ...
 2. ...
 3. ...
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+**期待される動作**
+期待される動作を明確かつ簡潔に説明してください。
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+**スクリーンショット**
+該当する場合は、問題を説明するためのスクリーンショットを追加してください。
 
-**Environment:**
- - OS: [e.g. Ubuntu 22.04, Windows 11]
- - Python version: [e.g. 3.10.4]
- - Package version: [e.g. 0.1.0]
+**環境情報:**
+ - OS: [例: Ubuntu 22.04, Windows 11]
+ - Pythonバージョン: [例: 3.10.4]
+ - パッケージバージョン: [例: 0.1.0]
 
-**Additional context**
-Add any other context about the problem here.
+**追加情報**
+問題に関するその他の情報があれば、ここに追加してください。

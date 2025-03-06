@@ -1,27 +1,27 @@
-## Description
+## 説明
 
-Please include a summary of the change and which issue is fixed. Please also include relevant motivation and context.
+変更の概要と修正されたイシューについて説明してください。また、関連する動機や背景も含めてください。
 
-Fixes # (issue)
+修正されたイシュー: # (イシュー番号)
 
-## Type of change
+## 変更の種類
 
-Please delete options that are not relevant.
+関連しないオプションを削除してください。
 
-- [ ] Bug fix (non-breaking change which fixes an issue)
-- [ ] New feature (non-breaking change which adds functionality)
-- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
-- [ ] Documentation update
+- [ ] バグ修正（既存の機能の問題を修正する非破壊的変更）
+- [ ] 新機能（機能を追加する非破壊的変更）
+- [ ] 破壊的変更（既存の機能が期待通りに動作しなくなる修正または機能）
+- [ ] ドキュメントの更新
 
-## How Has This Been Tested?
+## どのようにテストされましたか？
 
-Please describe the tests that you ran to verify your changes. Provide instructions so we can reproduce.
+変更を検証するために実行したテストについて説明してください。再現できる手順を提供してください。
 
-## Checklist:
+## チェックリスト:
 
-- [ ] My code follows the style guidelines of this project
-- [ ] I have performed a self-review of my own code
-- [ ] I have added tests that prove my fix is effective or that my feature works
-- [ ] New and existing unit tests pass locally with my changes
-- [ ] I have updated the documentation accordingly
-- [ ] I have added an entry to the CHANGELOG.md file
+- [ ] コードはプロジェクトのスタイルガイドラインに従っています
+- [ ] 自分のコードのセルフレビューを行いました
+- [ ] 修正が効果的であることや機能が動作することを証明するテストを追加しました
+- [ ] 新規および既存のユニットテストが変更によってローカルで通過します
+- [ ] ドキュメントを適切に更新しました
+- [ ] CHANGELOG.mdファイルにエントリを追加しました
