@@ -3,7 +3,7 @@
 
 def main() -> str:
     """Run the main function.
-    
+
     Returns:
         A greeting message
     """
