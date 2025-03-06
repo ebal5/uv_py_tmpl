@@ -12,9 +12,12 @@ license = {text = "MIT"}
 packages = [
     {include = "your_package_name", from = "src"}
 ]
-dependencies = [
-    # Add your dependencies here
-]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/your_package_name"]
+
+[project.dependencies]
+# Add your dependencies here
 
 [project.urls]
 "Homepage" = "https://github.com/yourusername/your_project_name"
