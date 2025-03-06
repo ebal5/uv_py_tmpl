@@ -1,0 +1,125 @@
+[project]
+name = "your_project_name"
+version = "0.1.0"
+description = "Your project description"
+authors = [
+    {name = "Your Name", email = "your.email@example.com"},
+]
+requires-python = ">=3.10"
+readme = "README.md"
+license = {text = "MIT"}
+# Define your package structure
+packages = [
+    {include = "your_package_name", from = "src"}
+]
+dependencies = [
+    # Add your dependencies here
+]
+
+[project.urls]
+"Homepage" = "https://github.com/yourusername/your_project_name"
+"Bug Tracker" = "https://github.com/yourusername/your_project_name/issues"
+"Documentation" = "https://your_project_name.readthedocs.io"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "ruff>=0.3.0",
+    "pre-commit>=3.5.0",
+    "mypy>=1.8.0",
+    "types-requests",  # add type stubs for dependencies as needed
+]
+
+docs = [
+    "sphinx>=7.0.0",
+    "sphinx-rtd-theme>=2.0.0",
+    "myst-parser>=2.0.0",
+]
+
+# Add a 'all' meta-dependency including all extras
+all = [
+    "your_project_name[dev,docs]",
+]
+
+[project.scripts]
+your-cli-command = "your_package_name.main:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+# Enable Pyflakes, pycodestyle, isort, and other rules
+select = ["E", "F", "I", "UP", "C90", "N", "B", "A", "COM", "C4", "PT", "RET", "SIM", "ARG", "ERA", "PL", "RUF", "T20"]
+ignore = []
+
+# Set line length to 120 characters
+line-length = 120
+
+# Allow autofix for all enabled rules
+fixable = ["ALL"]
+unfixable = []
+
+# Exclude some directories from linting
+exclude = [
+    ".git",
+    ".mypy_cache",
+    ".ruff_cache",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "build",
+    "dist",
+    "venv",
+]
+
+# Assume Python 3.10
+target-version = "py310"
+
+# Sort imports
+[tool.ruff.lint.isort]
+known-first-party = ["your_package_name"]
+
+# Exclude files and directories
+[tool.ruff.lint.extend-per-file-ignores]
+"__init__.py" = ["F401"]  # Allow unused imports in __init__.py
+"tests/**/*" = [
+    "S101",    # Use of assert detected (acceptable in tests)
+    "PLR2004", # Magic value used in comparison
+    "ARG001",  # Unused function argument
+    "E501",    # Line too long
+    "S106",    # Possible hardcoded password
+    "PT004",   # Use underscore for non-returning fixture
+    "PT011",   # Set the match parameter in pytest.raises
+    "PT019",   # Fixture without return statement
+    "F841",    # Local variable is assigned to but never used
+    "RUF012",  # Mutable class attributes should be annotated with typing.ClassVar
+]
+
+[tool.ruff.format]
+# Use Ruff's formatter
+quote-style = "double"
+indent-style = "space"
+line-ending = "auto"
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+strict_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+
+# Per-module options:
+[[tool.mypy.overrides]]
+module = "tests.*"
+disallow_untyped_defs = false
+disallow_incomplete_defs = false
