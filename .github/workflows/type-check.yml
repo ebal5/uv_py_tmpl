@@ -2,7 +2,6 @@ name: Type Check
 
 on:
   push:
-    branches: [ main ]
     paths:
       - "**.py"
       - "**.pyi"
@@ -10,7 +9,6 @@ on:
       - "mypy.ini"
       - ".github/workflows/type-check.yml"
   pull_request:
-    branches: [ main ]
     paths:
       - "**.py"
       - "**.pyi"
