@@ -50,12 +50,29 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [tool.ruff]
-# Enable Pyflakes, pycodestyle, isort, and other rules
-select = ["E", "F", "I", "UP", "C90", "N", "B", "A", "COM", "C4", "PT", "RET", "SIM", "ARG", "ERA", "PL", "RUF", "T20"]
-ignore = []
-
 # Set line length to 120 characters
 line-length = 120
+
+# Exclude some directories from linting
+exclude = [
+    ".git",
+    ".mypy_cache",
+    ".ruff_cache",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "build",
+    "dist",
+    "venv",
+]
+
+# Assume Python 3.10
+target-version = "py310"
+
+[tool.ruff.lint]
+# Enable Pyflakes, pycodestyle, isort, and other rules
+select = ["E", "F", "I", "UP", "C90", "N", "B", "A", "COM", "C4", "PT", "RET", "SIM", "ARG", "ERA", "PL", "RUF", "T20"]
+ignore = ["T201"]  # Ignore print statements warnings
 
 # Allow autofix for all enabled rules
 fixable = ["ALL"]

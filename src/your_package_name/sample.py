@@ -1,7 +1,7 @@
 """Sample module demonstrating typical Python patterns."""
 
 from dataclasses import dataclass
-from typing import Dict, List, Optional
+from typing import Optional
 
 
 @dataclass
@@ -10,8 +10,8 @@ class Person:
 
     name: str
     age: int
-    email: Optional[str] = None
-    skills: List[str] = None
+    email: str | None = None
+    skills: list[str] = None
 
     def __post_init__(self) -> None:
         """Initialize default values for optional fields."""
@@ -39,7 +39,7 @@ class Team:
             name: The team name
         """
         self.name = name
-        self.members: Dict[str, Person] = {}
+        self.members: dict[str, Person] = {}
 
     def add_member(self, person: Person) -> None:
         """Add a person to the team.
@@ -53,7 +53,7 @@ class Team:
         else:
             print(f"{person.name} is already in team {self.name}")
 
-    def list_skills(self) -> Dict[str, List[str]]:
+    def list_skills(self) -> dict[str, list[str]]:
         """List all skills of team members.
 
         Returns:
@@ -62,7 +62,7 @@ class Team:
         return {name: person.skills for name, person in self.members.items()}
 
 
-def build_team(team_name: str, members: List[Person]) -> Team:
+def build_team(team_name: str, members: list[Person]) -> Team:
     """Create a new team and add members to it.
 
     Args:

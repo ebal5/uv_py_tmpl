@@ -3,8 +3,7 @@
 from your_package_name.main import main
 
 
-def test_main(capsys) -> None:
+def test_main() -> None:
     """Test the main function."""
-    main()
-    captured = capsys.readouterr()
-    assert captured.out == "Hello, world!\n"
+    result = main()
+    assert result == "Hello, world!"

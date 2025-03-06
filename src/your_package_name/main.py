@@ -3,8 +3,9 @@
 
 def main() -> None:
     """Run the main function."""
-    print("Hello, world!")
+    return "Hello, world!"
 
 
 if __name__ == "__main__":
-    main()
+    result = main()
+    print(result)  # noqa: T201
