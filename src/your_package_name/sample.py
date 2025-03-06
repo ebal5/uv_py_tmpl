@@ -1,7 +1,6 @@
 """Sample module demonstrating typical Python patterns."""
 
 from dataclasses import dataclass
-from typing import Optional
 
 
 @dataclass
